@@ -1,113 +1,115 @@
-# Vanilla App Template
+# Gallery & Form App
 
-Цей проект було створено за допомогою Vite. Для знайомства та налаштування
-додаткових можливостей [звернись до документації](https://vitejs.dev/).
+A JavaScript project featuring an interactive image gallery with lightbox functionality and a feedback form with local storage persistence.
 
-## Створення репозиторію за шаблоном
+## 🌟 Demo
 
-Використовуй цей репозиторій організації GoIT як шаблон для створення
-репозиторію свого проекту. Для цього натисни на кнопку `«Use this template»` і
-обери опцію `«Create a new repository»`, як показано на зображенні.
+[🔗 Live Demo](https://helen-akateva.github.io/gallery-form-app/)
 
-![Creating repo from a template step 1](./assets/template-step-1.png)
+## 📋 Description
 
-На наступному етапі відкриється сторінка створення нового репозиторію. Заповни
-поле його імені, переконайся, що репозиторій публічний, після чого натисни
-кнопку `«Create repository from template»`.
+This project demonstrates fundamental JavaScript concepts and DOM manipulation through two main features:
 
-![Creating repo from a template step 2](./assets/template-step-2.png)
+- **Image Gallery**: An interactive gallery that displays images with a lightbox feature, allowing users to view full-size images with descriptions
+- **Feedback Form**: A contact form that saves user input to local storage, ensuring data persistence across page reloads
 
-Після того, як репозиторій буде створено, необхідно перейти в налаштування
-створеного репозиторію на вкладку `Settings` > `Actions` > `General` як показано
-на зображенні.
+## 🛠️ Technologies
 
-![Settings GitHub Actions permissions step 1](./assets/gh-actions-perm-1.png)
+- **HTML5** - Semantic markup
+- **CSS3** - Modern styling
+- **JavaScript (ES6+)** - Core functionality
+- **Vite** - Build tool and development server
+- **SimpleLightbox** - Lightbox library for image gallery
+- **LocalStorage API** - Data persistence for form
 
-Проскроливши сторінку до самого кінця, в секції `«Workflow permissions»` обери
-опцію `«Read and write permissions»` і постав галочку в чекбоксі. Це необхідно
-для автоматизації процесу деплою проекту.
+## ✨ Features
 
-![Settings GitHub Actions permissions step 2](./assets/gh-actions-perm-2.png)
+### Gallery
+- Responsive image grid layout
+- Lightbox functionality with SimpleLightbox library
+- Image captions and descriptions
+- Smooth transitions and animations
+- Keyboard navigation support
 
-Тепер у тебе є особистий репозиторій проекту, зі структурою файлів та папок
-репозиторію-шаблону. Далі працюй з ним, як з будь-яким іншим особистим
-репозиторієм, клонуй його собі на комп'ютер, пиши код, роби коміти та відправляй
-їх на GitHub.
+### Form
+- Email and message input fields
+- Real-time data saving to localStorage
+- Form validation
+- Auto-population from localStorage on page load
+- Data clearing on successful submission
 
-## Підготовка до роботи
+## 🚀 Installation
 
-1. Переконайся, що на комп'ютері встановлено LTS-версію Node.js.
-   [Скачай та встанови](https://nodejs.org/en/) її якщо необхідно.
-2. Встанови базові залежності проекту в терміналі командою `npm install`.
-3. Запусти режим розробки, виконавши в терміналі команду `npm run dev`.
-4. Перейдіть у браузері за адресою
-   [http://localhost:5173](http://localhost:5173). Ця сторінка буде автоматично
-   перезавантажуватись після збереження змін у файли проекту.
-
-## Файли і папки
-
-- Файли розмітки компонентів сторінки повинні лежати в папці `src/partials` та
-  імпортуватись до файлу `index.html`. Наприклад, файл з розміткою хедера
-  `header.html` створюємо у папці `partials` та імпортуємо в `index.html`.
-- Файли стилів повинні лежати в папці `src/css` та імпортуватись до HTML-файлів
-  сторінок. Наприклад, для `index.html` файл стилів називається `index.css`.
-- Зображення додавай до папки `src/img`. Збирач оптимізує їх, але тільки при
-  деплої продакшн версії проекту. Все це відбувається у хмарі, щоб не
-  навантажувати твій комп'ютер, тому що на слабких компʼютерах це може зайняти
-  багато часу.
-
-## Деплой
-
-Продакшн версія проекту буде автоматично збиратися та деплоїтись на GitHub
-Pages, у гілку `gh-pages`, щоразу, коли оновлюється гілка `main`. Наприклад,
-після прямого пуша або прийнятого пул-реквесту. Для цього необхідно у файлі
-`package.json` змінити значення прапора `--base=/<REPO>/`, для команди `build`,
-замінивши `<REPO>` на назву свого репозиторію, та відправити зміни на GitHub.
-
-```json
-"build": "vite build --base=/<REPO>/",
+1. Clone the repository:
+```bash
+git clone https://github.com/helen-akateva/gallery-form-app.git
 ```
 
-Далі необхідно зайти в налаштування GitHub-репозиторію (`Settings` > `Pages`) та
-виставити роздачу продакшн версії файлів з папки `/root` гілки `gh-pages`, якщо
-це не було зроблено автоматично.
+2. Navigate to the project directory:
+```bash
+cd gallery-form-app
+```
 
-![GitHub Pages settings](./assets/repo-settings.png)
+3. Install dependencies:
+```bash
+npm install
+```
 
-### Статус деплою
+4. Start the development server:
+```bash
+npm run dev
+```
 
-Статус деплою крайнього коміту відображається іконкою біля його ідентифікатора.
+5. Open your browser and visit `http://localhost:5173`
 
-- **Жовтий колір** - виконується збірка та деплой проекту.
-- **Зелений колір** - деплой завершився успішно.
-- **Червоний колір** - під час лінтингу, збірки чи деплою сталася помилка.
+## 📦 Build
 
-Більш детальну інформацію про статус можна переглянути натиснувши на іконку, і в
-вікні, що випадає, перейти за посиланням `Details`.
+To create a production build:
 
-![Deployment status](./assets/deploy-status.png)
+```bash
+npm run build
+```
 
-### Жива сторінка
+## 📁 Project Structure
 
-Через якийсь час, зазвичай кілька хвилин, живу сторінку можна буде подивитися за
-адресою, вказаною на вкладці `Settings` > `Pages` в налаштуваннях репозиторію.
-Наприклад, ось посилання на живу версію для цього репозиторію
+```
+gallery-form-app/
+├── src/
+│   ├── index.html          # Main page with navigation
+│   ├── 1-gallery.html      # Gallery page
+│   ├── 2-form.html         # Form page
+│   ├── css/                # Styles
+│   ├── js/
+│   │   ├── 1-gallery.js    # Gallery logic
+│   │   └── 2-form.js       # Form logic with localStorage
+│   └── img/                # Images
+├── package.json
+├── vite.config.js
+└── README.md
+```
 
-[https://goitacademy.github.io/vanilla-app-template/](https://goitacademy.github.io/vanilla-app-template/).
+## 💡 Usage
 
-Якщо відкриється порожня сторінка, переконайся, що у вкладці `Console` немає
-помилок пов'язаних з неправильними шляхами до CSS та JS файлів проекту
-(**404**). Швидше за все у тебе неправильне значення прапора `--base` для
-команди `build` у файлі `package.json`.
+### Gallery
+1. Navigate to the Gallery page
+2. Click on any image to open it in lightbox mode
+3. Use arrow keys or navigation buttons to browse through images
+4. Press ESC or click outside to close the lightbox
 
-## Як це працює
+### Form
+1. Navigate to the Form page
+2. Enter your email and message
+3. Data is automatically saved to localStorage as you type
+4. Submit the form to log the data and clear localStorage
+5. Refresh the page to see your data restored from localStorage
 
-![How it works](./assets/how-it-works.png)
+## 👩‍💻 Author
 
-1. Після кожного пуша у гілку `main` GitHub-репозиторію, запускається
-   спеціальний скрипт (GitHub Action) із файлу `.github/workflows/deploy.yml`.
-2. Усі файли репозиторію копіюються на сервер, де проект ініціалізується та
-   проходить лінтинг та збірку перед деплоєм.
-3. Якщо всі кроки пройшли успішно, зібрана продакшн версія файлів проекту
-   відправляється у гілку `gh-pages`. В іншому випадку, у лозі виконання скрипта
-   буде вказано в чому проблема.
+**Olena Akatieva**
+
+- LinkedIn: [linkedin.com/in/olena-akatieva](https://linkedin.com/in/olena-akatieva)
+- GitHub: [@helen-akateva](https://github.com/helen-akateva)
+
+## 📄 License
+
+This project is open source and available under the ISC License.
